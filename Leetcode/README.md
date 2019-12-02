@@ -18,6 +18,7 @@
 * [ ] recursive
 * [ ] 流程式
 
+Python
 None, 0对象与符号if, and, or
 * None与0对象都是False -> 如vector(0,0,0)
 * 多个值中，若同时有None与0对象，不便判断，可以使None变为0对象
@@ -32,3 +33,15 @@ None, 0对象与符号if, and, or
 **滑动窗口算法（Sliding Window）**：在循环中，使用两个变量记录窗口的边界
 * 使用边界变量访问边界值，监控进出窗口的值
 * 使用字典/数组/集合记录窗口内的内容（无序）
+
+### leetcode_0690
+员工的重要性
+
+广度优先 比 深度优先 速度快：没有回溯步骤
+深度优先 比 广度优先 内存小：不用保存整个树
+Python
+* 字典推导：{e.i:e for e in employees}
+* 队列：
+  * q=queue.Queue()
+  * q.put(), q.get()
+  * q.isEmpty()
