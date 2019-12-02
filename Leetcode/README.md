@@ -37,6 +37,8 @@ None, 0对象与符号if, and, or
 ### leetcode_0690
 员工的重要性
 
+树搜索
+
 广度优先 比 深度优先 速度快：没有回溯步骤
 深度优先 比 广度优先 内存小：不用保存整个树
 Python
@@ -45,3 +47,29 @@ Python
   * q=queue.Queue()
   * q.put(), q.get()
   * q.isEmpty()
+
+### leetcode_0100
+相同的树-树遍历
+
+深度优先范式-递归
+```python
+def DFS(t):
+    if reachExit: return
+    return DFS(t.left) and DFS(t.mid) and DFS(t.right)
+```
+
+广度优先范式-队列
+```python
+def BFS(t):
+    import queue
+    q = queue.Queue()
+    result = 0
+    q.put(t)
+        while not t.empty():
+            if reachExit: return # or continue
+            result ++
+            q.put(t.left)
+            q.put(t.mid)
+            q.put(t.right)
+        return result
+```
