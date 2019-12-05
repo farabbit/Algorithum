@@ -73,3 +73,13 @@ def BFS(t):
             q.put(t.right)
         return result
 ```
+
+### leetcode_0310
+最小高度树 -> 树的重心
+[leetcode_0310.py](./leetcode_0310.py)
+
+python
+* set
+  * ```setDict = collections.defaultdict(set)``` - 默认set字典，省去set初始化，可以直接```setDict[i] |= {t}```
+  * ```setA |= {t}, setA -= {t}```
+  * ```setA.pop()```随机取值
