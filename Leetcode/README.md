@@ -74,12 +74,23 @@ def BFS(t):
         return result
 ```
 
-### leetcode_0310
+### leetcode_0310 *REDO*
 最小高度树 -> 树的重心
+
 [leetcode_0310.py](./leetcode_0310.py)
+
+树形图：从外向内剥洋葱，逐次去掉度为1的节点
 
 python
 * set
   * ```setDict = collections.defaultdict(set)``` - 默认set字典，省去set初始化，可以直接```setDict[i] |= {t}```
   * ```setA |= {t}, setA -= {t}```
   * ```setA.pop()```随机取值
+
+### leetcode_0671 *REDO*
+二叉树中第二小的节点
+
+[leetcode_0671.py](./leetcode_0671.py)
+
+* 多重情况分支时，使用多个简单的if，往往比把情况叠加更简洁
+* 可以不那么急着返回值
