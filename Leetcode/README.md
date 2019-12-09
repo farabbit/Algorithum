@@ -105,3 +105,32 @@ python
 
 * 多重情况分支时，使用多个简单的if，往往比把情况叠加更简洁
 * 可以不那么急着返回值
+
+### [leetcode_0273](./leetcode_0273.py) *REDO 好好看好好学*
+
+python
+1. enumerate(iterable, start)
+  * example: enumerate('abcd', 2): (2, 'a'), (3, 'b'), (4, 'c'), (5, 'd')
+2. ```a[-1:0]= '', [] or ()```
+3. 从字符串中去掉空格' '：.split(), 加上空格：' '.join()
+
+```python
+class Solution:
+    def numberToWords(self, num: int) -> str:
+        to19 = 'One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve ' \
+               'Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen'.split()
+        tens = 'Twenty Thirty Forty Fifty Sixty Seventy Eighty Ninety'.split()
+
+        def helper(num):
+            if num < 20:
+                return to19[num - 1:num] # a[-1:0] = '' <-> -1~0 not exist
+            if num < 100:
+                return [tens[num // 10 - 2]] + helper(num % 10)
+            if num < 1000:
+                return [to19[num // 100 - 1]] + ["Hundred"] + helper(num % 100)
+            for p, w in enumerate(["Thousand", "Million", "Billion"], 1):
+                if num < 1000 ** (p + 1):
+                    return helper(num // 1000 ** p) + [w] + helper(num % 1000 ** p)
+
+        return " ".join(helper(num)) or "Zero"
+```
