@@ -39,6 +39,12 @@ None, 0对象与符号if, and, or
 
 * 首尾双指针 -> 获取最值时，若能够处理好外部点与内部点之间的关系，可使用首尾双指针
 
+### [leetcode_0013](leetcode_0013.py)
+罗马数字转整数
+
+python
+* 简单的循环叠加可以用```return sum(i*2 for i in range(i))```代替
+
 ### leetcode_0690
 员工的重要性
 
