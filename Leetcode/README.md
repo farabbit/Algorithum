@@ -2,18 +2,14 @@
 
 ## 题目
 
-### leetcode_0001
+### [leetcode_0001](./leetcode_0001.py)
 两数之和
-
-[leetcode_0001.py](./leetcode_0001.py)
 
 * 哈希表优化搜索速度 O(n)-> O(1) - 消耗内存，换取速度
 * Python: 使用字典模拟哈希表
 
-### leetcode_0002
+### [leetcode_0002](./leetcode_0002.py)
 两数相加 - 倒序链表
-
-[leetcode_0002.py](./leetcode_0002.py)
 
 * [ ] recursive
 * [ ] 流程式
@@ -27,7 +23,7 @@ None, 0对象与符号if, and, or
 * 例：确定a, b, c中有且只有一个不为None(或0对象)，使其.val值自增1
   * (a and b and c).val += 1
 
-### leetcode_0003
+### [leetcode_0003](leetcode_0003.py)
 无重复最长字串
 
 **滑动窗口算法（Sliding Window）**：在循环中，使用两个变量记录窗口的边界
@@ -45,7 +41,7 @@ None, 0对象与符号if, and, or
 python
 * 简单的循环叠加可以用```return sum(i*2 for i in range(i))```代替
 
-### leetcode_0690
+### [leetcode_0690](leetcode_0690.py)
 员工的重要性
 
 树搜索
@@ -59,7 +55,7 @@ Python
   * q.put(), q.get()
   * q.isEmpty()
 
-### leetcode_0100
+### [leetcode_0100](leetcode_0100.py)
 相同的树-树遍历
 
 深度优先范式-递归
@@ -85,10 +81,8 @@ def BFS(t):
         return result
 ```
 
-### leetcode_0310 *REDO*
+### [leetcode_0310](./leetcode_0310.py) *REDO*
 最小高度树 -> 树的重心
-
-[leetcode_0310.py](./leetcode_0310.py)
 
 树形图：从外向内剥洋葱，逐次去掉度为1的节点
 
@@ -98,10 +92,8 @@ python
   * ```setA |= {t}, setA -= {t}```
   * ```setA.pop()```随机取值
 
-### leetcode_0671 *REDO*
+### [leetcode_0671](./leetcode_0671.py) *REDO*
 二叉树中第二小的节点
-
-[leetcode_0671.py](./leetcode_0671.py)
 
 * 多重情况分支时，使用多个简单的if，往往比把情况叠加更简洁
 * 可以不那么急着返回值
@@ -151,21 +143,25 @@ class Solution:
         return [lst[i:i+size] for size, lst in resultDic.items() for i in range(0,len(lst),size)]
 ```
 
-### [leetcode_0202](./leetcode_1282.py) *REDO*
+### leetcode 202 快乐树 [Happy Number](https://leetcode-cn.com/problems/happy-number/) *REDO*
+
+[leetcode_0202.py](./leetcode_1282.py)
 
 尾递归
 * 尾递归从最后开始计算, 每递归一次就算出相应的结果, 也就是说, 函数调用出现在调用者函数的尾部, 因为是尾部, 所以**没有必要去保存任何局部变量**. 直接让被调用的函数返回时越过调用者。尾递归**把当前的运算结果（或路径）放在参数里传给下层函数**，深层函数所面对的不是越来越简单的问题，而是越来越复杂的问题，因为参数里带有前面若干步的运算路径。
+
 快慢指针
 * 可以用于发现循环
+
 python
 * 循环内外都返回值bool时，可以分析条件判断结果，合并返回值
 
 ```python
 def v2(n):
-		history = {1}
-		while n not in history:
-				summ = sum(int(i)**2 for i in (str(n)))
-				history.add(n)
-				n=summ
-		return n==1
+    history = {1}
+    while n not in history:
+        summ = sum(int(i)**2 for i in (str(n)))
+        history.add(n)
+        n=summ
+    return n==1
 ```
