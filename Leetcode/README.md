@@ -165,3 +165,16 @@ def v2(n):
         n=summ
     return n==1
 ```
+
+### leetcode 258 [Add Digits](https://leetcode-cn.com/problems/add-digits/comments/)
+各位相加
+> 给定一个非负整数 num，反复将各个位上的数字相加，直到结果为一位数。
+
+时间复杂度O(1) => 有公式解
+
+python
+* tail recursion
+```python
+def addDigits(num: int) -> int:
+    return addDigits(sum(int(i) for i in str(num))) if num > 9 else num
+```
