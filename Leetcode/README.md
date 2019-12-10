@@ -150,3 +150,22 @@ class Solution:
             resultDic[size].append(i)
         return [lst[i:i+size] for size, lst in resultDic.items() for i in range(0,len(lst),size)]
 ```
+
+### [leetcode_0202](./leetcode_1282.py) *REDO*
+
+尾递归
+* 尾递归从最后开始计算, 每递归一次就算出相应的结果, 也就是说, 函数调用出现在调用者函数的尾部, 因为是尾部, 所以**没有必要去保存任何局部变量**. 直接让被调用的函数返回时越过调用者。尾递归**把当前的运算结果（或路径）放在参数里传给下层函数**，深层函数所面对的不是越来越简单的问题，而是越来越复杂的问题，因为参数里带有前面若干步的运算路径。
+快慢指针
+* 可以用于发现循环
+python
+* 循环内外都返回值bool时，可以分析条件判断结果，合并返回值
+
+```python
+def v2(n):
+		history = {1}
+		while n not in history:
+				summ = sum(int(i)**2 for i in (str(n)))
+				history.add(n)
+				n=summ
+		return n==1
+```
