@@ -134,3 +134,19 @@ class Solution:
 
         return " ".join(helper(num)) or "Zero"
 ```
+
+### [leetcode_1282](./leetcode_1282.py) *REDO 好好看好好学*
+
+python
+* 循环：在函数体构造数据结构
+* 列表推导：在返回值解包数据结构
+* dd = collectionl.defaultdict(list) -> ```dd[i].append()```
+
+```python
+class Solution:
+    def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
+        resultDic = collections.defaultdict(list)
+        for i,size in enumerate(groupSizes):
+            resultDic[size].append(i)
+        return [lst[i:i+size] for size, lst in resultDic.items() for i in range(0,len(lst),size)]
+```
