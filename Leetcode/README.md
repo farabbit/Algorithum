@@ -8,6 +8,25 @@
 * 哈希表优化搜索速度 O(n)-> O(1) - 消耗内存，换取速度
 * Python: 使用字典模拟哈希表
 
+### [leetcode_0015](./leetcode_0015.py)
+三数之和
+
+对于无序输入，且与值大小有关的题，可考虑排序后处理
+
+python
+* ```a[len(a)-1:len(a)]``` 替代 ```a[-1]``` 可避免index out of range
+* ```__hash__与__eq__```使用hash(id(self))计算哈希值，或判断相等性
+  ```python
+  def __hash__(self):
+    return hash(id(self))
+
+  def __eq__(self, other):
+    if isinstance(other, self.__class__):
+      return hash(id(self))==hash(id(other))
+    else:
+      return False
+  ```
+
 ### [leetcode_0002](./leetcode_0002.py)
 两数相加 - 倒序链表
 
