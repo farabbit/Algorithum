@@ -26,6 +26,18 @@ python
     else:
       return False
   ```
+* practice: UnorderedTuple
+```python
+class UnorderedTuple(tuple):
+  def __hash__(self):
+      return super().__hash__(tuple(sorted(self)))
+
+  def __eq__(self, other):
+      if isinstance(other, self.__class__):
+          return self.__hash__()==other.__hash__()
+      else:
+          return False
+```
 
 ### [leetcode_0002](./leetcode_0002.py)
 两数相加 - 倒序链表
