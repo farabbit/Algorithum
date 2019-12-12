@@ -99,9 +99,18 @@ Python
 ### leetcode_0746 使用最小花费爬楼梯
 pass
 
+### leetcode_0118 杨辉三角
+pass
+
+### leetcode_0119 杨辉三角 II
+
 ### leetcode_0121 买卖股票的最佳时机
 python
 直接用>/<比max() min()快
+
+### leetcode_0122 买卖股票的最佳时机 II
+python
+用+=迭代效率比return sum()高
 
 ### [leetcode_0100](leetcode_0100.py)
 相同的树-树遍历
