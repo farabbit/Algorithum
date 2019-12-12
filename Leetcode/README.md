@@ -54,7 +54,7 @@ None, 0对象与符号if, and, or
 * 例：确定a, b, c中有且只有一个不为None(或0对象)，使其.val值自增1
   * (a and b and c).val += 1
 
-### [leetcode_0003](leetcode_0003.py)
+### [leetcode_0003](leetcode_0003.py) *REDO*
 无重复最长字串
 
 **滑动窗口算法（Sliding Window）**：在循环中，使用两个变量记录窗口的边界
@@ -174,7 +174,7 @@ class Solution:
         return [lst[i:i+size] for size, lst in resultDic.items() for i in range(0,len(lst),size)]
 ```
 
-### leetcode 202 快乐树 [Happy Number](https://leetcode-cn.com/problems/happy-number/) *REDO*
+### leetcode 202 快乐数 [Happy Number](https://leetcode-cn.com/problems/happy-number/) *REDO*
 
 [leetcode_0202.py](./leetcode_1282.py)
 
