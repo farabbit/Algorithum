@@ -85,6 +85,23 @@ Python
   * q=queue.Queue()
   * q.put(), q.get()
   * q.isEmpty()
+  
+### leetcode 0053 最大子序和
+动态规划
+  
+### leetcode 0070 爬楼梯
+动态规划
+0. 确定需要保存的结构
+1. 最优解结构
+2. 状态转移方程
+3. 初始状态
+
+### leetcode_0746 使用最小花费爬楼梯
+pass
+
+### leetcode_0121 买卖股票的最佳时机
+python
+直接用>/<比max() min()快
 
 ### [leetcode_0100](leetcode_0100.py)
 相同的树-树遍历
