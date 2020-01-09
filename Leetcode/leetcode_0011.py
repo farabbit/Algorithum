@@ -50,3 +50,12 @@ class Solution:
                 else: i+=1
             return maxV
         return doublePointer(height)
+
+
+(RomanDic[char] - 
+(0 if 
+    (i==0 or RomanDic[char]>=RomanDic[s[i-1]])
+else RomanDic[s[i-1]]*2))
+
+ for i,char in enumerate(s)
+ 
